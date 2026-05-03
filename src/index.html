@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <script src="index.js" defer></script>
 </head>
 <body>
  <header class=" shadow-lg sticky top-0 z-50 bg-[#1d3a5f]  ">
@@ -74,7 +75,7 @@
          without stress.
       </p>
       <div class="flex items-center gap-5">
-   <a class="bg-[#f59e0b] text-white text-[12px] px-6 py-2 rounded-full" href="">MAKE A DEPOSIT</a>
+   <a class="bg-[#f59e0b] text-white text-[12px] px-6 py-2 rounded-full" href="./deposit.html">MAKE A DEPOSIT</a>
    <div class="flex items-center border rounded-full  shadow-2xl border-gray-100 px-4">
    <img class="w-7 pt-1" src="image/whatapp-icon-removebg-preview.png" alt="">
      <a class="text-[12px]"  href="https://wa.me/2348037222169?text=Hello%20I%20want%20to%20get%20started%20with%20OG%20PayBridge">Chat on WhatsApp</a>
@@ -250,26 +251,7 @@
 
 
 
-    <script>
-    const menubtn = document.getElementById("menu-btn");
-    const mobilemenu = document.getElementById("mobile-menu");
-
-    menubtn.addEventListener("click", () => {
-    mobilemenu.classList.toggle("hidden");
-
-    });
-
-
-
-    const navLinks = document.querySelectorAll("#mobile-menu a");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    mobilemenu.classList.add("hidden");
-  });
-});
-
-</script>
+    
   
 </body>
 </html>
