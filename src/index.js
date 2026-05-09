@@ -1,20 +1,4 @@
 
-  // const rate = 0.00065; // NGN → USD
-
-  // function setAmount(value) {
-  //   document.getElementById("amountInput").value = value;
-  //   updateUSD(value);
-  // }
-
-  // function updateUSD(amount) {
-  //   const usd = amount * rate;
-  //   document.getElementById("usdText").innerText =
-  //     "(≈ $" + usd.toFixed(2) + ")";
-  // }
-
-  // document.getElementById("amountInput").addEventListener("input", function () {
-  //   updateUSD(this.value || 0);
-  // });
 
 
   function setAmount(value) {
@@ -30,6 +14,36 @@ document.getElementById("amountInput").addEventListener("input", function () {
   updateDisplay(this.value);
 });
 
+
+
+document.getElementById("payBtn").addEventListener("click", function () {
+
+  let amount = document.getElementById("amountInput").value;
+
+  FlutterwaveCheckout({
+    public_key: "FLWPUBK-ab46a67dfb1a6016ae7159462676aee7-X",
+
+    tx_ref: "tx-" + Date.now(),
+
+    amount: amount,
+
+    currency: "USD",
+
+    payment_options: "card, banktransfer, ussd",
+
+    customer: {
+      email: "customer@gmail.com",
+      phone_number: "08000000000",
+      name: "Customer"
+    },
+
+    customizations: {
+      title: "Global Payment",
+      description: "Deposit Payment",
+    }
+  });
+
+});
 
 
 
